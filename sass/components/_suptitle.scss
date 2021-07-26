@@ -1,0 +1,34 @@
+.invite {
+  margin-left: 70px;
+}
+
+.invite__text,
+.subscribe__text {
+  color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  margin-left: 90px;
+}
+
+.services__title {
+  color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+// .employees__item h3
+
+.employees__suptitle {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0 auto 10px auto;
+}

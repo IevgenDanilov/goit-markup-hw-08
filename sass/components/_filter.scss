@@ -1,0 +1,13 @@
+.filter {
+  align-items: center;
+  margin: 0 auto 50px 0;
+  display: flex;
+  flex-direction: reverse;
+  justify-content: center;
+}
+
+.filter {
+  .button {
+    margin-right: 8px;
+  }
+}
