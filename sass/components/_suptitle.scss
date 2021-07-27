@@ -1,5 +1,6 @@
-.invite {
-  margin-left: 70px;
+.invite,
+.subscribe {
+  margin: 60px 0 0 0;
 }
 
 .invite__text,
@@ -9,10 +10,7 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-}
-
-.subscribe {
-  margin-left: 90px;
+  margin-bottom: 20px;
 }
 
 .services__title {
@@ -31,4 +29,19 @@
   font-size: 16px;
   line-height: 1.2;
   margin: 0 auto 10px auto;
+}
+
+// 000000000000000000000
+
+@media screen and (min-width: 768px) {
+  .invite {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .invite,
+  .subscribe {
+    margin: 0;
+  }
 }

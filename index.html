@@ -12,14 +12,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
     <!-- Шапка сайта -->
-    <header class="page-header">
+    <!-- <header class="page-header">
         <div class="container flex">
 
 
@@ -48,7 +46,7 @@
                         +38 096 111 11 11</a></li>
             </ul>
         </div>
-    </header>
+    </header> -->
 
     <main>
         <!-- Герой -->
@@ -69,7 +67,7 @@
         <section class="section-special-first">
             <div class="container">
 
-                <!-- <h2 class="unvisible">Список преимуществ</h2> -->
+                <h2 class="is-hidden">Список преимуществ</h2>
 
                 <ul class="feature__list list">
                     <li class="feature__item icon-antenna">
@@ -103,7 +101,7 @@
 
         <!-- Перечень услуг -->
 
-        <section class="section-special-second services">
+        <section class="services section-special-second">
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
 
@@ -139,7 +137,15 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="list employees__list">
                     <li class="employees__item">
-                        <img src="./images/igor_demyanenko.jpg" alt="Сотрудник компании" width="270" />
+                        <picture>
+                            <source srcset="./images/igor_demyanenko.jpg" media="(min-width: 1200px)" width="270"
+                                height="260">
+                            <source srcset="./images/igor_demyanenko.jpg" media="(min-width: 768px)" width="354"
+                                height="374">
+                            <source srcset="./images/igor_demyanenko.jpg" media="(max-width: 767px)" width="450"
+                                height="460">
+                            <img src="" alt="Сотрудник компании">
+                        </picture>
                         <div class="employees__description">
                             <h3 class="employees__suptitle">Игорь Демьяненко</h3>
                             <p>Product Designer</p>
@@ -176,7 +182,15 @@
                         </div>
                     </li>
                     <li class="employees__item">
-                        <img src="./images/olga_repina.jpg" alt="Сотрудник компании" width="270" />
+                        <picture>
+                            <source srcset="./images/olga_repina.jpg" media="(min-width: 1200px)" width="270"
+                                height="260">
+                            <source srcset="./images/olga_repina.jpg" media="(min-width: 768px)" width="354"
+                                height="374">
+                            <source srcset="./images/olga_repina.jpg" media="(max-width: 767px)" width="450"
+                                height="460">
+                            <img src="" alt="Сотрудник компании">
+                        </picture>
                         <div class="employees__description">
                             <h3 class="employees__suptitle">Ольга Репина</h3>
                             <p>Frontend Developer</p>
@@ -213,7 +227,16 @@
                         </div>
                     </li>
                     <li class="employees__item">
-                        <img src="./images/nikolay_tarasov.jpg" alt="Сотрудник компании" width="270" />
+                        <picture>
+                            <source srcset="./images/nikolay_tarasov.jpg" media="(min-width: 1200px)" width="270"
+                                height="260">
+                            <source srcset="./images/nikolay_tarasov.jpg" media="(min-width: 768px)" width="354"
+                                height="374">
+                            <source srcset="./images/nikolay_tarasov.jpg" media="(max-width: 767px)" width="450"
+                                height="460">
+                            <img src="" alt="Сотрудник компании">
+                        </picture>
+
                         <div class="employees__description">
                             <h3 class="employees__suptitle">Николай Тарасов</h3>
                             <p>Marketing</p>
@@ -250,7 +273,15 @@
                         </div>
                     </li>
                     <li class="employees__item">
-                        <img src="./images/mikhail_ermakov.jpg" alt="Сотрудник компании" width="270" />
+                        <picture>
+                            <source srcset="./images/mikhail_ermakov.jpg" media="(min-width: 1200px)" width="270"
+                                height="260">
+                            <source srcset="./images/mikhail_ermakov.jpg" media="(min-width: 768px)" width="354"
+                                height="374">
+                            <source srcset="./images/mikhail_ermakov.jpg" media="(max-width: 767px)" width="450"
+                                height="460">
+                            <img src="" alt="Сотрудник компании">
+                        </picture>
                         <div class="employees__description">
                             <h3 class="employees__suptitle">Михаил Ермаков</h3>
                             <p>UI Designer</p>
@@ -351,7 +382,7 @@
 
     <footer class="footer">
         <div class="container footer-wrapper">
-            <div>
+            <div class="contacts">
                 <a href="./index.html" class="logo logo__footer-mix">
                     Web<span class="logo__footer--inverse">Studio</span>
                 </a>
@@ -424,7 +455,7 @@
 
     <!-- Модальное окно -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__close-btn" data-modal-close>
                 <svg width="11" height="11">
@@ -482,7 +513,7 @@
                 <button type="submit" class="modal__btn">Отправить</button>
             </form>
         </div>
-    </div>
+    </div> -->
 
     <script src="./js/modal.js"></script>
 </body>

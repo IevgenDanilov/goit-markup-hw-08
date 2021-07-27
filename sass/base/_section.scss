@@ -1,11 +1,32 @@
-.section {
-  padding: 94px 0;
-}
-
-.section-special-first {
-  padding: 94px 0 47px 0;
-}
-
+.section,
+.section-special-first,
 .section-special-second {
-  padding: 47px 0 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+// @media screen and (min-width: 768px) {
+//   .section,
+//   .section-special-first,
+//   .section-special-second {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+//   }
+// }
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .section-special-first {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+
+  .section-special-second {
+    padding-top: 47px;
+    padding-bottom: 94px;
+  }
 }
