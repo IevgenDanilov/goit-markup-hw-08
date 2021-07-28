@@ -1,9 +1,5 @@
 .projects {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  display: block;
 
   a {
     text-decoration: none;
@@ -24,10 +20,8 @@
     line-height: 1.87;
   }
 
-  &item {
-    margin-left: 30px;
+  &item:not(:first-child) {
     margin-top: 30px;
-    flex-basis: calc((100% - 90px) / 3);
   }
 
   &item:hover {
@@ -75,5 +69,46 @@
   &wrapper:hover &overlay,
   &wrapper:focus &overlay {
     transform: translateY(0%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  .projects__ {
+    &item {
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc((100% - 60px) / 2);
+    }
+
+    &img {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  .projects__ {
+    &item {
+      margin-left: 30px;
+      margin-top: 30px;
+      flex-basis: calc((100% - 90px) / 3);
+    }
   }
 }
