@@ -417,11 +417,22 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
+  width: 96vw;
+  max-width: 450px;
+  height: 96vh;
+  max-height: 610px;
+  overflow: auto;
   background-color: #ffffff;
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 580px;
+  }
 }
 
 .modal__form {
@@ -551,8 +562,8 @@ img {
 }
 
 .page-header-tab {
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .logo {
@@ -578,6 +589,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .page-header-tab {
+    justify-content: center;
+    align-items: center;
+  }
   .site-nav {
     display: flex;
     position: relative;
@@ -675,6 +690,88 @@ img {
     flex-direction: row;
     align-items: flex-end;
     margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .header__tel {
+    display: none;
+  }
+  .header__modal-btn {
+    display: none;
+  }
+  .burger-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+  .burger-btn__icon {
+    fill: #ffffff;
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-menu {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: wheat;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 500ms linear, visibility 500ms linear;
+  }
+  .mobile-menu__container {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 35px;
+  }
+  .mobile-menu__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+  .mobile-menu__close-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav-list {
+    margin-bottom: 60px;
+  }
+  .mobile-social-list {
+    display: flex;
+    margin: 0 -10px;
+  }
+  .mobile-social-list__item:not(:last-child) {
+    border-right: 1px solid #303030;
+  }
+  .mobile-social-list__link {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
   }
 }
 
