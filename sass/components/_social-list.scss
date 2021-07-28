@@ -17,7 +17,6 @@
     color: rgba(255, 255, 255, 0.6);
     padding: 15px;
     background-color: transparent;
-    margin-right: 12px;
     margin-bottom: 20px;
   }
 
@@ -47,6 +46,7 @@
     &input {
       width: 360px;
       margin-bottom: 0px;
+      margin-right: 12px;
     }
   }
 }

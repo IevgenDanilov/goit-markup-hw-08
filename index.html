@@ -17,13 +17,13 @@
 
 <body>
     <!-- Шапка сайта -->
-    <!-- <header class="page-header">
-        <div class="container flex">
+    <header class="page-header container">
+        <div class="flex page-header-tab">
 
 
             <nav class="nav flex">
-                <a href="./index.html" class="logo logo__header-mix">
-                    Web<span class="logo__header-mix--inverse">Studio</span>
+                <a href="./index.html" class="logo logo__header">
+                    Web<span class="logo__header--inverse">Studio</span>
                 </a>
 
                 <ul class="site-nav list">
@@ -34,7 +34,7 @@
             </nav>
 
             <ul class="auth-nav list">
-                <li><a href="mailto:info@devstudio.com" class="button">
+                <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="button">
                         <svg class="auth-nav__icon" width="16" height="12">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
@@ -46,7 +46,53 @@
                         +38 096 111 11 11</a></li>
             </ul>
         </div>
-    </header> -->
+        <!-- <button class="burger-btn" data-menu-open>
+            <svg class="burger-btn__icon">
+                <use href="./images/sprite.svg#burger-icon"></use>
+            </svg>
+        </button>
+        <a class="header__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
+        <button class="modal-btn modal-btn_theme_dark header__modal-btn" data-modal-open
+            type="button">онлайн-запись</button>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon">
+                        <use href="./images/sprite.svg#close-icon"></use>
+                    </svg>
+                </button>
+                <ul class="nav-list list">
+                    <li class="nav-list__item">
+                        <a href="" class="nav-list__link link">О нас</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="" class="nav-list__link link">Услуги и цены</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="" class="nav-list__link link">Мастера</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="" class="nav-list__link link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="mobile-social-list list">
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">Instagram</a>
+                    </li>
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">Twitter</a>
+                    </li>
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">Facebook</a>
+                    </li>
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    </header>
 
     <main>
         <!-- Герой -->
@@ -455,7 +501,7 @@
 
     <!-- Модальное окно -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__close-btn" data-modal-close>
                 <svg width="11" height="11">
@@ -513,7 +559,7 @@
                 <button type="submit" class="modal__btn">Отправить</button>
             </form>
         </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
 </body>

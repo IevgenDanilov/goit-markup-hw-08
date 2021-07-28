@@ -2,8 +2,9 @@
   border-bottom: 1px solid #ececec;
 }
 
-.page-header li {
-  padding: 32px 0;
+.page-header-tab {
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -15,102 +16,141 @@
   text-decoration: none;
 }
 
-logo__header-mix {
-  margin-right: 0 95px 0 0;
-  // padding: 25px 0 25px 0;
+.logo__header {
+  padding: 16px 0;
 }
 
-//  Модификатор логотипа в хедере
-
-.logo__header-mix--inverse {
+.logo__header--inverse {
   color: var(--primary-text-color);
 }
 
-//  ============== NAVIGATION ==============
-
-.site-nav {
-  display: flex;
-  margin: auto 0;
-
-  .link {
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    text-decoration: none;
-  }
-
-  .link:hover,
-  .link:focus {
-    color: var(--accent-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .current {
-    color: var(--accent-color);
-  }
-  .link:hover::after,
-  .link:focus::after,
-  .current::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-  }
-}
-
-.site-nav__item {
-  margin-right: 50px;
-  position: relative;
-  display: block;
-}
-
+.site-nav,
 .auth-nav {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-left: auto;
+  display: none;
 }
 
-.auth-nav .button {
-  color: var(--secondary-text-color);
-  fill: var(--secondary-text-color);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  // .page-header {
+  //   padding: 20px;
+  // }
 
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-    fill: var(--accent-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  //  ============== NAVIGATION ==============
+
+  .site-nav {
+    display: flex;
+    position: relative;
+    margin: auto 0;
+
+    .link {
+      color: var(--primary-text-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      text-decoration: none;
+    }
+
+    .link:hover,
+    .link:focus {
+      color: var(--accent-color);
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .current {
+      color: var(--accent-color);
+    }
+    .link:hover::after,
+    .link:focus::after,
+    .current::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+  }
+
+  .nav {
+    align-items: baseline;
+  }
+
+  .site-nav__item {
+    margin-right: 50px;
+    position: relative;
+    display: block;
+    padding: 32px 0;
+  }
+
+  .auth-nav .button {
+    color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      fill: var(--accent-color);
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  .auth-nav__icon {
+    margin-right: 10px;
+  }
+
+  .auth-nav {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+
+  .logo__header {
+    margin-right: 80px;
+    padding: 26px 0;
+  }
+
+  .auth-nav__item:not(:first-child) {
+    margin-top: 10px;
   }
 }
-
-.auth-nav__item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.auth-nav__icon {
-  margin-right: 10px;
-}
-
-// @media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 1200px) {
+  .page-header-tab {
+    justify-content: baseline;
+  }
+
+  // .page-header {
+  //   padding: 25px;
+  // }
+  .auth-nav__item:not(:first-child) {
+    margin-left: 50px;
+  }
+
   .logo {
     font-size: 26px;
+  }
+
+  .logo__header {
+    margin-right: 95px;
+    padding: 26px 0;
+  }
+
+  .auth-nav {
+    font-size: 14px;
+    line-height: 1.14;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: auto;
   }
 }
