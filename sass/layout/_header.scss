@@ -135,11 +135,9 @@
 @media screen and (min-width: 1200px) {
   .page-header-tab {
     justify-content: baseline;
+    flex-grow: 1;
   }
 
-  // .page-header {
-  //   padding: 25px;
-  // }
   .auth-nav__item:not(:first-child) {
     margin-left: 50px;
   }

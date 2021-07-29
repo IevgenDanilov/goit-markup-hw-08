@@ -707,6 +707,7 @@ img {
 @media screen and (min-width: 1200px) {
   .page-header-tab {
     justify-content: baseline;
+    flex-grow: 1;
   }
   .auth-nav__item:not(:first-child) {
     margin-left: 50px;
