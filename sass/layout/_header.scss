@@ -1,5 +1,8 @@
 .page-header {
+  display: flex;
   border-bottom: 1px solid #ececec;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page-header-tab {
@@ -27,6 +30,10 @@
 .site-nav,
 .auth-nav {
   display: none;
+}
+
+.logo__icon {
+  fill: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -156,7 +163,7 @@
   }
 }
 
-// 00000000000000000000
+// BURGER
 
 @media screen and (max-width: 767px) {
   .menu {
@@ -164,11 +171,25 @@
   }
 
   .header__tel {
-    display: none;
+    color: var(--accent-color);
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    margin-top: 300px;
   }
 
-  .header__modal-btn {
-    display: none;
+  .header__mail-link {
+    color: var(--secondary-text-color);
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    margin-top: 32px;
   }
 
   .burger-btn {
@@ -178,9 +199,14 @@
     line-height: 0;
 
     &__icon {
-      fill: #ffffff;
+      fill: #212121;
       width: 40px;
       height: 40px;
+    }
+
+    &__icon:hover,
+    &__icon:focus {
+      fill: var(--accent-color);
     }
   }
 
@@ -191,7 +217,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: wheat;
+    background-color: #ffffff;
 
     opacity: 0;
     visibility: hidden;
@@ -207,8 +233,8 @@
 
     &__close-btn {
       position: absolute;
-      top: 10px;
-      right: 15px;
+      top: 20px;
+      right: 25px;
       background-color: transparent;
       border: none;
       padding: 0;
@@ -216,8 +242,13 @@
     }
 
     &__close-icon {
-      width: 40px;
-      height: 40px;
+      width: 20px;
+      height: 20px;
+      fill: #212121;
+    }
+
+    &__close-icon:hover {
+      fill: var(--accent-color);
     }
 
     &.is-open {
@@ -228,13 +259,33 @@
   }
 
   .nav-list {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+    &__item {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.18;
+      text-align: left;
+      letter-spacing: 0.02em;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &__link {
+      color: var(--primary-text-color);
+    }
+
+    &__link:hover,
+    &__link:focus {
+      color: var(--accent-color);
+    }
   }
 
   .mobile-social-list {
     display: flex;
-
-    margin: 0 -10px;
+    margin: 65px 0 0 -10px;
 
     &__item {
       &:not(:last-child) {
@@ -244,16 +295,31 @@
 
     &__link {
       padding: 0 10px;
+      color: var(--accent-color);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22px;
+      letter-spacing: 0.02em;
     }
   }
 }
 
 @media screen and (min-width: 768px) {
+  .header__tel,
+  .header__mail-link {
+    display: none;
+  }
+
   .burger-btn {
     display: none;
   }
 
   .mobile-menu {
     display: none;
+  }
+
+  .logo__icon {
+    fill: #303030;
   }
 }
