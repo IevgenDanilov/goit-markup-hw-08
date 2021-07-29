@@ -37,13 +37,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  // .page-header {
-  //   padding: 20px;
-  // }
   .page-header-tab {
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
+    flex-grow: 1;
   }
+
   .site-nav {
     display: flex;
     position: relative;
@@ -88,10 +87,13 @@
   }
 
   .site-nav__item {
-    margin-right: 50px;
     position: relative;
     display: block;
     padding: 32px 0;
+  }
+
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
   }
 
   .auth-nav .button {
@@ -135,11 +137,6 @@
 @media screen and (min-width: 1200px) {
   .auth-nav__item:not(:first-child) {
     margin-top: 0px;
-  }
-
-  .page-header-tab {
-    justify-content: baseline;
-    flex-grow: 1;
   }
 
   .auth-nav__item:not(:first-child) {
